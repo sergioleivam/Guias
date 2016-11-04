@@ -1,0 +1,87 @@
+\documentclass[letter,10pt]{article} 
+\usepackage[spanish,activeacute]{babel} %idioma español
+\usepackage[utf8]{inputenc}             %transforma los tildes a lenguaje latex automáticamente
+\usepackage{multirow}                   %Permite cosntruir tablas en las que algunas celdas ocupan varias filas dentro de un entorno tabular con la orden \multirow, en el caso de columnas es \multicolumn  ... \multirrow{nrow}{width}[vmove]{contenido}
+% nrow: número de filas a agrupar
+%width: ancho de la columna
+%vmove: sirve para subir o bajar el texto (opcional)
+\usepackage{epsfig}                     %permite incluir gráficos eps
+\usepackage{graphicx}                   %Permite incluir gráficos e imágenes
+\usepackage{subfig}                     %Permite hacer subfiguras
+\usepackage{amsmath}                    %Extiende el modo matemático
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{mathrsfs}
+\usepackage{hyperref}
+\usepackage{colortbl} %Permite agregar color a las tablas
+\usepackage{epstopdf}                 %Permite utilizar imagenes en formato eps
+\usepackage{float}   %permite indicar la posición de las figuras
+\usepackage[left=3cm,right=3cm,top=3cm,bottom=3cm]{geometry}
+\renewcommand{\baselinestretch}{1.5}
+\parskip=4pt
+
+\usepackage{fullpage}            %%
+\usepackage{fancyhdr} 
+\usepackage{mdframed}            %%
+
+\setlength{\headheight}{54pt}    %%
+\setlength{\headsep}{1em}        %%
+\setlength{\textheight}{8.5in}  
+\setlength{\footskip}{0.5in} 
+
+
+\begin{document}
+\author{Sergio Leiva M.}
+\title{\textbf{Informe Tarea 6}}
+\maketitle
+
+%\thispagestyle{firstpage}
+\section{Cosas usuales}
+
+\subsection{Comandos}
+Se puede definir un nuevo comando, distinto de los que existen en latex propiamente tal, usando: \\
+ \verb+\newcommand{\nombre}{acción}+ para cuando se debe usar varias veces dentro de \verb+.tex+. La idea es crear algo  con como las derivadas y otros que no tienen una forma simple (1 comando) en latex. En la parte \textit{acción} es donde se debe escribir el "código de latex para lo que queremos hacer" 
+
+
+\subsection{Barra superior}
+Para crea un logo en la parte superior izquierda y da informacion en la parte superior derecha. 
+
+ Ademas se debe escribir \verb+\thispagestyle{firstpage}+ para que situe en la primera pagina o en verdad donde ese comando quede.
+
+%como inlcluir un fancypagestyle
+\begin{verbatim} 
+\fancypagestyle{firstpage}
+{
+  \fancyhf{}
+  \lhead{\includegraphics[height=5em]{LogoDFI.jpg}}
+  \rhead{Código - semestre\\
+         Ramo\\
+         Profesor}
+  \fancyfoot[C]{\thepage}
+}
+
+\pagestyle{plain}
+\fancyhf{}
+\fancyfoot[C]{\thepage}
+
+\end{verbatim}
+
+En el código anterior tenemos el comando \verb+lhead{...}+ en donde se rellena con lo que se quiere que aparesca en la parte superior izquierda de la pagina correspondiente. Similar con el caso \verb+rhead{...}+ con el lado derecho. Algo importante es que no es necesariamente una sola linea ni solo escritura, por que se puede incluir una imagen de la forma en que esta la parte izquierda.
+
+Ciertamente lo ultimo no estoy muy seguro de lo que hace pero con eso no se muere y al parecer funciona.
+\subsection{Imprimiendo Verbatim}
+
+Me dio paja escribirlo, esta en la pagina 46 del \textit{lshort.pdf}
+
+\subsection{Comandos utiles}
+%\begin{enumerate}
+El comando \verb|\ldots| hace :  \ldots
+
+%\end{enumerate}
+
+
+\section{Un dia lo use}
+
+
+
+\end{document}}

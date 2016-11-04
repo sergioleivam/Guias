@@ -1,0 +1,54 @@
+Mini guia de lo que hice para vincular github
+
+terminal:
+
+ 	git clone "link"             [este link se saca de la pagina de github, con el boton clone, en el repositorio que se quiera clonar, y va sin las comillas]
+	
+
+	git status 		     [te muestra que cosas no estan actualizadas en rojo y cuales son los nuevos commit que no estan consolidados]
+
+	git diff          [Muestra las diferencias que exiten comparado con lo que hay nuevo y lo que tienes en internet]
+
+	git add "archivo"            [ desde la carpeta que es repositorio, para agregar la carpeta que no esta actualizada en la pagina, nombre sin comillas]
+
+	git commit "archivo" -m "mensaje" 
+				     [despues de hacer git add "archivo", para consolidar el archivo en la carpeta, usamos este comando para decirle que guarde definitivamente el archivo(sin comillas) con el mensaje "mensaje" que es para dejar un registro de cual fue la modificacion en este archivo para una posterior recuperación, debe ser simple y corto, con comillas]
+
+
+	git push                     [esto se hace en la carpeta que ya clonamos, llegas a ella por la terminal y das el comando, pedira el username y la clave]---> sergioleivam, ser87...92
+[se actualiza las cosas que ya estan consolidadas, onda le dice a la pagina de internet, pelmaso tengo cosas nuevas y las guarda]
+
+	
+	git reset HEAD "file1" "file2" 
+				     [ si te arrepiente del git add, le das los nombres de los archivos que no quieres y listo]
+
+
+	git config --global user.email "correo" [darle tu email para que te identifique]
+	git config --global user.name "nombre"  [darle tu nombre para que te identifique]
+
+	[En los dos comandos anteriores se puede omitir --global para darle guardar tu identidad solo en ese repositorio]
+
+
+	git config --global push.default matching [configura globalmente por default que guarde el brach local a un branch remoto con el mismo nombre]
+	git config --global push.default simple   [configura globalmente por default que guarde el brach local a un branch remoto corespondiente que git pull usa como actualizacion reciente]
+
+
+
+	git config --global credential.helper cache [para que recuerde el username y la clave por minimo 15 min]
+	git config --global credential.helper 'cache --timeout=3600' [para que recuerde la clave por 1 hora, el numero debe estar en segundos]
+
+	
+	git log        [Lee los commit que pueda tener un proyecto, y despues de hacer un fork se siguen guardando]
+                    Existe otro comando para volver a algun punto donde funcionaba
+
+
+#### Para subir archivos
+
+	git clone link, mkdir, jupyter notebook
+
+	git status (opcional)
+	git add archivo
+	git commit archivo -m "mensaje"
+	git push
+
+Estamos listos. :D

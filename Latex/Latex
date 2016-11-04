@@ -1,0 +1,25 @@
+Para modificar la capacidad maxima de las matrices:
+
+ 		\setcouter{MaxMatrixXols}{12}
+
+Para modificar el tamaño de las celdas:
+	
+
+		\scalebox{0.5}{stuff}
+
+Matrices :
+
+      http://tex.stackexchange.com/questions/204621/matrix-in-latex
+
+
+Instalar paquetes
+
+
+	http://askubuntu.com/questions/72803/easy-installation-removal-of-a-latex-package
+
+
+Cosas, viene con instalar el tex live como dice el link anterior
+
+
+		file:///usr/share/texlive/readme-html.dir/readme.en.html 
+

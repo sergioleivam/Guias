@@ -1,0 +1,24 @@
+
+range(2)  --- [0,1] crea una lista de naturales hasta el numero que se le de (sin incluir)
+range(inicio,final) ---  [inicio,inicio+1,...,final-1] crea una lista de naturales desde un incio (incluyendo) hasta un final (sin incluir)
+
+Array :
+import numpy as np
+a=np.loadtxt('nombre del .dat') ---"Entrega un array"
+a.shape ---- Da las dimensiones del array a, como una tupla, ej: a.shape[1]=N. de columnas
+a[1:2,3] --- te lo que hay da desde la primera fila, tercerca columna, a la segunda fila, tercerca columna,
+
+
+np.linspaces(0,np.pi,100) crea una lista desde cero hasta pi, con 100 numeros entre ellos
+plt.clf(), limpia el plot que puedas tener antes de ese comando para que no se junten todos 
+
+
+Para leer archivos:
+
+http://stackoverflow.com/questions/899103/writing-a-list-to-a-file-with-python (segundo comentario)  [pickle]
+
+
+Otra forma que ya me funciono una vez:
+
+https://docs.scipy.org/doc/numpy-1.10.1/reference/generated/numpy.save.html
+https://docs.scipy.org/doc/numpy/reference/generated/numpy.load.html

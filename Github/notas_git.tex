@@ -1,0 +1,87 @@
+\documentclass[letter,10pt]{article} 
+\usepackage[spanish,activeacute]{babel} %idioma español
+\usepackage[utf8]{inputenc}             %transforma los tildes a lenguaje latex automáticamente
+\usepackage{multirow}                   %Permite cosntruir tablas en las que algunas celdas ocupan varias filas dentro de un entorno tabular con la orden \multirow, en el caso de columnas es \multicolumn  ... \multirrow{nrow}{width}[vmove]{contenido}
+% nrow: número de filas a agrupar
+%width: ancho de la columna
+%vmove: sirve para subir o bajar el texto (opcional)
+\usepackage{epsfig}                     %permite incluir gráficos eps
+\usepackage{graphicx}                   %Permite incluir gráficos e imágenes
+\usepackage{subfig}                     %Permite hacer subfiguras
+\usepackage{amsmath}                    %Extiende el modo matemático
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{mathrsfs}
+\usepackage{hyperref}
+\usepackage{colortbl} %Permite agregar color a las tablas
+\usepackage{epstopdf}                 %Permite utilizar imagenes en formato eps
+\usepackage{float}   %permite indicar la posición de las figuras
+\usepackage[left=3cm,right=3cm,top=3cm,bottom=3cm]{geometry}
+\renewcommand{\baselinestretch}{1.5}
+\parskip=4pt
+
+\usepackage{fullpage}            %%
+\usepackage{fancyhdr} 
+\usepackage{mdframed}            %%
+
+\setlength{\headheight}{54pt}    %%
+\setlength{\headsep}{1em}        %%
+\setlength{\textheight}{8.5in}  
+\setlength{\footskip}{0.5in} 
+\newcommand{\g}{Github }
+
+\begin{document}
+
+\author{Sergio Leiva M.}
+\title{\textbf{Guia para \g}}
+\maketitle
+
+Todos estos comandos se utilizan en el terminal.
+
+\section{git clone link}
+ Lo primero que hay que hacer para trabajar con los archivos de \g  en el computador, es "crear" el repositorio en el computador, con la instrucción en el terminal, \textit{git clone link}, y el link se saca de la pagina de github, con el boton clone, en el repositorio que se quiera clonar.
+
+\section{git status}
+ Este comando es util para saber en que estado estan los archivos que estan en la carpeta de \g pero en el computador, es decir, los archivos que tienen alguna diferencia con lo que esta en los registros de \g. Además tambien reconoce los archivos nuevos que deben ser agregados, y los archivos que no estan comprometidos es decir ya fueron agregados pero no estan subidos a \g.
+ 
+\section{git diff}
+
+ Muestra las diferencias que exiten comparado con lo que hay nuevo y lo que tienes en internet
+ 
+\section{git add archivo1 archivo 2 \ldots} 
+ 
+ Se usa para agregar los archivos nuevos o modifecados, separados por un espacio. Aun cuando sean agregados, no estan en el sistema de \g por lo que hay que agregarlos y cerrar con un commit y push.
+ 
+ Existe la posibilidad de agregar todos los archivos que esten modificados o agregados, con \textbf{git add . } pero no es recomendable por el tema de los commit.
+ 
+\section{git commit archivo - "mensaje"} 
+
+Cada vez que se usa, se guarda un mensaje que estiqueta lo que se guardo en ese momento, por lo que agrupa todo lo que se agrego desde el ultimo commit. 
+
+Es recomendable hacer un commit por cada avance o cambio grande, dado que se puede hacer una recuperación de la información hasta un commit, por lo que ademas el mensaje debe ser explicativo, pues debe aclarar cual es la modificación.
+
+\section{git push}
+
+Con esto se actualiza y formaliza lo que ya esta consolidado, en la pagina de \g para quede guardado, antes de esto no se puede recuperar, pero sigue estando en la carpeta del computador. 
+
+\section{git reset HEAD file1 file2}
+
+Si algo que esta agregado por un \textit{git add}, pero no se debia hacer o no debe ir en el mismo commit.
+
+\section{git log}
+
+Visualiza en el terminal una lista de todos los commit que se han hecho en el repositorio, y por quien fue hecho.
+
+\section{Orden de comandos}
+Para subir un archivo el orden en que se deben hacer es. 
+
+\begin{enumerate}
+\item \textbf{git status}
+\item \textbf{git add archivo}
+\item \textbf{git commit -m "mensaje"}
+\item \textbf{git push}
+
+\end{enumerate}
+ 
+ 
+\end{document}
