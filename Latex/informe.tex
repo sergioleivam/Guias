@@ -66,12 +66,18 @@ Para crea un logo en la parte superior izquierda y da informacion en la parte su
 
 \end{verbatim}
 
+
 En el código anterior tenemos el comando \verb+lhead{...}+ en donde se rellena con lo que se quiere que aparesca en la parte superior izquierda de la pagina correspondiente. Similar con el caso \verb+rhead{...}+ con el lado derecho. Algo importante es que no es necesariamente una sola linea ni solo escritura, por que se puede incluir una imagen de la forma en que esta la parte izquierda.
 
 Ciertamente lo ultimo no estoy muy seguro de lo que hace pero con eso no se muere y al parecer funciona.
 \subsection{Imprimiendo Verbatim}
+ 
+Uso del comando \verb|\verb++|
+\begin{description}
+\item{\verb|\verb+text+| } Ayuda a "verbalizar" algo,como si fuera escrito a mano, de preferencia corto como una expresion o un comando de latex, como por ejemplo los comandos mostrados en esta guia fueron escritos con este comand. Pero latex lo tomara como un continuo y debe estar bien puesto para que no exceda los limites de la pagina. Los simbolos ++ son arbitrarios, pero los unicos que no se pueden usar son letras, * o espacios
+\item{\verb|\verb*+text+| } Similar al caso anterior pero con el detalle de que rellena los espacios con un marcador, ej: \verb*+Soy el mejor+.
+\end{description}
 
-Me dio paja escribirlo, esta en la pagina 46 del \textit{lshort.pdf}
 
 \subsection{Comandos utiles}
 %\begin{enumerate}
