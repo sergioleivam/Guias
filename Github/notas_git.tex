@@ -54,9 +54,12 @@ Todos estos comandos se utilizan en el terminal.
  
  Existe la posibilidad de agregar todos los archivos que esten modificados o agregados, con \textbf{git add . } pero no es recomendable por el tema de los commit.
  
-\section{git commit archivo - "mensaje"} 
+\section{git commit} 
+\begin{description}
+\item [-m "mensaje"] Cada vez que se usa, se guarda un mensaje que estiqueta lo que se guardo en ese momento, por lo que agrupa todo lo que se agrego desde el ultimo commit. 
+\item[-a] Similiar al caso anterior solo que con este se entra a una interfaz para hacer commit a todo lo que este con un \textit{git add} previamente.
+\end{description}
 
-Cada vez que se usa, se guarda un mensaje que estiqueta lo que se guardo en ese momento, por lo que agrupa todo lo que se agrego desde el ultimo commit. 
 
 Es recomendable hacer un commit por cada avance o cambio grande, dado que se puede hacer una recuperación de la información hasta un commit, por lo que ademas el mensaje debe ser explicativo, pues debe aclarar cual es la modificación.
 
